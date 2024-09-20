@@ -6,35 +6,35 @@ public class RollOneDie {
     private static int rollCount = 0;
 
     public static void main(String[] args) {
-        System.out.println("Velkommen til spillet, rul en terning.");
+        System.out.println("Welcome to the game, Roll-A-Die!");
         printRules();
         System.out.println();
 
         playOneDie();
 
         System.out.println();
-        System.out.println("Tak for at spille, rul en terning.");
+        System.out.println("Thank you for playing, Roll-A-Die!");
     }
 
     private static void printRules() {
         System.out.println("=====================================================");
-        System.out.println("Regler for rul en terning");
-        System.out.println("Spilleren ruller en terning, så længde man lyster.");
+        System.out.println("Rules of Roll-A-Die!");
+        System.out.println("The Player rolls a die, as long as he wishes!");
         System.out.println("=====================================================");
     }
 
     private static void playOneDie() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Rul en terning? ('ja/nej') ");
+        System.out.print("Roll-A-Die? ('yes/no') ");
         String answer = scanner.nextLine();
-        while (!answer.equals("nej")) {
+        while (!answer.equals("no")) {
             int face = rollDie();
-            System.out.println("Du rullede: " + face);
+            System.out.println("You rolled: " + face);
             System.out.println();
 
             updateStatistics();
 
-            System.out.print("Rul en terning? ('ja/nej') ");
+            System.out.print("Roll-A-Die? ('yes/no') ");
             answer = scanner.nextLine();
         }
 
@@ -53,7 +53,7 @@ public class RollOneDie {
     private static void printStatistics() {
         System.out.println("\nResults:");
         System.out.println("-------");
-        System.out.printf("%17s %4d\n", "Antal rul:", rollCount);
+        System.out.printf("%17s %4d\n", "Number of times rolled:", rollCount);
     }
 
 }

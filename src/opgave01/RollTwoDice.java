@@ -37,17 +37,17 @@ public class RollTwoDice {
 
     private static void play2Die() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Roll-2-Die?    [YES] / [NO] ");
+        System.out.print("Roll-2-Die?    Yes = [ENTER] / No = [EXIT] + ENTER");
         System.out.println();
         String answer = scanner.nextLine();
-        while (!answer.equals("NO")) {
+        while (!answer.equals("EXIT")) {
             int[] faces = rollDice();
             System.out.println("YOU ROLLED: " + faces[0] + " AND " + faces[1]);
             System.out.println();
 
             updateStatistics(faces);
 
-            System.out.print("Roll-2-Die?    [YES] / [NO] ");
+            System.out.print("Roll-2-Die?    Yes = [ENTER] / No = [EXIT] + ENTER");
             System.out.println();
             System.out.println();
             answer = scanner.nextLine();
